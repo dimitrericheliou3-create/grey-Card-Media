@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101110">
+  <meta name="description" content="Grey Card Media is a Saint Lucia-based media and communications company offering photography, video production, public relations, social media management and strategic communications.">
+  <title>Grey Card Media | Stories With Purpose</title>
+  <style>
+    :root{--ink:#101110;--paper:#f3f0e8;--muted:#b5b7af;--lime:#d6fa63;--line:rgba(243,240,232,.18);--max:1200px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--paper);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}button,a{-webkit-tap-highlight-color:transparent}
+    .wrap{width:min(var(--max),calc(100% - 48px));margin:auto}.topbar{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:800;letter-spacing:.12em}.mark{width:35px;height:35px;border:1px solid var(--lime);display:grid;place-items:center;color:var(--lime);font-weight:900;font-size:18px;transform:rotate(-6deg)}.brand span:last-child{line-height:1.2}
+    nav{display:flex;gap:28px;align-items:center;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#deded6}nav a:hover{color:var(--lime)}.nav-cta{border:1px solid var(--lime);padding:13px 17px;color:var(--lime)}
+    .hero{min-height:690px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:76px 0 90px;position:relative}
+    .eyebrow{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:var(--lime);font-weight:700}.eyebrow:before{content:"";width:28px;height:1px;background:var(--lime)}
+    h1{font-size:clamp(58px,8vw,112px);line-height:.91;letter-spacing:-.075em;margin:28px 0 26px;font-weight:800;max-width:720px}h1 em{font-style:normal;color:var(--lime)}.hero-copy{font-size:17px;line-height:1.7;color:#c3c5bd;max-width:490px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 20px;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;transition:.2s}.btn-primary{background:var(--lime);color:var(--ink)}.btn-primary:hover{background:#e5ff9d;transform:translateY(-2px)}.btn-outline{border:1px solid #555951}.btn-outline:hover{border-color:var(--lime);color:var(--lime)}
+    .visual{height:520px;position:relative;overflow:hidden;background:#272a25}.visual img{width:100%;height:100%;object-fit:cover;filter:saturate(.7);opacity:.88}.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(12,14,12,.75))}.visual-tag{position:absolute;z-index:1;bottom:22px;left:22px;right:22px;display:flex;justify-content:space-between;align-items:end}.visual-tag strong{font-size:25px;letter-spacing:-.04em}.visual-tag span{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--lime)}
+    .stamp{position:absolute;z-index:2;top:24px;right:24px;width:96px;height:96px;border-radius:50%;background:var(--lime);color:var(--ink);display:grid;place-items:center;text-align:center;font-size:10px;line-height:1.35;font-weight:800;letter-spacing:.08em;transform:rotate(10deg)}
+    .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;overflow:hidden;white-space:nowrap;color:var(--lime);font-size:12px;text-transform:uppercase;letter-spacing:.2em}.ticker span{margin:0 24px}.ticker b{color:#70746a;font-size:18px}
+    section{padding:100px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:42px}.kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--lime)}h2{font-size:clamp(38px,5vw,65px);line-height:.98;letter-spacing:-.065em;margin:14px 0 0;max-width:700px}.section-intro{max-width:340px;color:#b9bcb3;line-height:1.7;font-size:14px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.service{min-height:235px;padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .2s}.service:hover{background:#1b1e19}.service .num{color:var(--lime);font-size:11px;letter-spacing:.12em}.service h3{font-size:23px;letter-spacing:-.04em;margin:42px 0 12px}.service p{color:#b9bcb3;font-size:13px;line-height:1.65;margin:0;max-width:290px}
+    .about{background:var(--paper);color:var(--ink)}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;align-items:center}.about .kicker{color:#52651b}.about h2{font-size:clamp(42px,5vw,68px)}.about-copy{font-size:16px;line-height:1.8;color:#484b43}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#c8c8bc;margin-top:30px;border:1px solid #c8c8bc}.stat{background:var(--paper);padding:20px}.stat strong{font-size:26px;letter-spacing:-.04em;display:block}.stat span{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#686b61;display:block;margin-top:6px}
+    .approach{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}.approach-image{height:440px;overflow:hidden;background:#272a25}.approach-image img{width:100%;height:100%;object-fit:cover;filter:saturate(.65)}.approach-text p{font-size:15px;line-height:1.8;color:#b9bcb3}.principles{margin-top:30px;border-top:1px solid var(--line)}.principle{display:flex;gap:20px;padding:17px 0;border-bottom:1px solid var(--line);font-size:13px}.principle span{color:var(--lime);font-size:11px}
+    .contact{background:var(--lime);color:var(--ink);padding:82px 0}.contact-grid{display:flex;align-items:end;justify-content:space-between;gap:40px}.contact .kicker{color:#44541c}.contact h2{max-width:760px}.contact p{font-size:15px;line-height:1.7;max-width:470px;color:#3d4528}.contact .btn-primary{background:var(--ink);color:var(--paper)}.contact .btn-outline{border-color:rgba(16,17,16,.35)}.contact .btn-outline:hover{border-color:var(--ink);color:var(--ink)}
+    footer{padding:28px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;color:#9da096;font-size:11px;letter-spacing:.04em}.foot-brand{color:var(--paper);font-weight:800;letter-spacing:.12em}.footer-links{display:flex;gap:20px}.footer-links a:hover{color:var(--lime)}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;padding:58px 0 65px;gap:38px}.visual{height:440px}.hero h1{font-size:clamp(60px,14vw,100px)}.services{grid-template-columns:repeat(2,1fr)}.about-grid,.approach{grid-template-columns:1fr;gap:36px}.about-grid{gap:20px}.approach-image{height:360px}.section-head{align-items:start;flex-direction:column}.contact-grid{align-items:start;flex-direction:column}}
+    @media(max-width:560px){.wrap{width:calc(100% - 32px)}.topbar{height:70px}.brand{font-size:12px}.mark{width:31px;height:31px}nav a:not(.nav-cta){display:none}.nav-cta{padding:11px 12px;font-size:10px}.hero{padding-top:48px;min-height:0}.hero-copy{font-size:15px}.visual{height:360px}.stamp{width:78px;height:78px;font-size:8px}.visual-tag strong{font-size:20px}.ticker{font-size:10px}.ticker span{margin:0 12px}section{padding:70px 0}.services{grid-template-columns:1fr}.service{min-height:190px;padding:24px}.service h3{margin-top:28px}.about-grid{gap:18px}.stats{margin-top:22px}.approach-image{height:290px}.contact{padding:66px 0}footer{align-items:start;flex-direction:column}.footer-links{flex-wrap:wrap}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="brand" href="#home" aria-label="Grey Card Media home"><span class="mark">G</span><span>GREY CARD<br>MEDIA</span></a>
+    <nav aria-label="Main navigation"><a href="#services">Services</a><a href="#about">About</a><a href="#approach">Approach</a><a class="nav-cta" href="#contact">Start a conversation ↗</a></nav>
+  </header>
+  <main>
+    <div class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow">Saint Lucia · Media & Communications</div>
+        <h1>Make your<br>story <em>matter.</em></h1>
+        <p class="hero-copy">Thoughtful storytelling. Strong visuals. Clear communication. We help people, organisations and brands turn important ideas into stories that connect.</p>
+        <div class="actions"><a class="btn btn-primary" href="#contact">Let’s work together <span>↗</span></a><a class="btn btn-outline" href="#services">Explore our services <span>↓</span></a></div>
+      </div>
+      <div class="visual">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1400&q=85" alt="A live event with an audience and stage lighting">
+        <div class="stamp">LOCAL<br>STORIES.<br>WIDER<br>REACH.</div>
+        <div class="visual-tag"><strong>Ideas, captured<br>with intention.</strong><span>01 / Storytelling</span></div>
+      </div>
+    </div>
+    <div class="ticker" aria-label="Our services"><span>Photography</span><b>✳</b><span>Video Production</span><b>✳</b><span>Strategic Communications</span><b>✳</b><span>Public Relations</span><b>✳</b><span>Social Media</span><b>✳</b><span>Documentary</span></div>
+    <section class="wrap" id="services">
+      <div class="section-head"><div><div class="kicker">What we do</div><h2>Creative work.<br>Clear purpose.</h2></div><p class="section-intro">From the first idea to the final frame, we bring strategy and creative production together to help your message land.</p></div>
+      <div class="services">
+        <article class="service"><div class="num">01 / VISUALS</div><h3>Photography</h3><p>Professional imagery for events, organisations, campaigns and the moments worth remembering.</p></article>
+        <article class="service"><div class="num">02 / FILM</div><h3>Video & Documentary</h3><p>Visual storytelling that brings people, projects and ideas to life with clarity and feeling.</p></article>
+        <article class="service"><div class="num">03 / STRATEGY</div><h3>Public Relations</h3><p>Thoughtful communications that build understanding, strengthen relationships and protect trust.</p></article>
+        <article class="service"><div class="num">04 / DIGITAL</div><h3>Social Media Management</h3><p>Consistent, purposeful content designed to keep your audience informed and engaged.</p></article>
+        <article class="service"><div class="num">05 / BRAND STORY</div><h3>Corporate Profiles</h3><p>Present your organisation, its work and its value through a clear, compelling narrative.</p></article>
+        <article class="service"><div class="num">06 / RESPONSE</div><h3>Crisis Communications</h3><p>Support for sensitive communications when accuracy, judgement and a measured response matter.</p></article>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <div><div class="kicker">Who we are</div><h2>Grounded in Saint Lucia. Connected to the wider Caribbean.</h2></div>
+        <div><p class="about-copy">Grey Card Media is a Saint Lucia-based media and communications company working across the public and private sectors. We bring together creative production, editorial judgement and strategic thinking to tell stories that inform, engage and make an impact.</p><p class="about-copy">Our experience spans tourism, health, social development, entertainment and corporate communications—with a focus on work that serves a real purpose and respects the people behind every story.</p>
+          <div class="stats"><div class="stat"><strong>Since 2021</strong><span>Company established</span></div><div class="stat"><strong>Since 2008</strong><span>Photography & video experience</span></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="wrap" id="approach">
+      <div class="approach">
+        <div class="approach-image"><img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1200&q=85" alt="Camera equipment ready for a production"></div>
+        <div class="approach-text"><div class="kicker">The Grey Card approach</div><h2>Good work starts with listening.</h2><p>Every brief has a different audience, context and goal. We take time to understand what matters, then shape the right mix of story, visuals and communication to bring it forward.</p><div class="principles"><div class="principle"><span>01</span><div><strong>Listen first</strong><br>Understand the people, purpose and audience.</div></div><div class="principle"><span>02</span><div><strong>Make it meaningful</strong><br>Build a clear message and creative direction.</div></div><div class="principle"><span>03</span><div><strong>Deliver with care</strong><br>Keep the work considered, professional and on brief.</div></div></div></div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid"><div><div class="kicker">Have a story to tell?</div><h2>Let’s make something meaningful.</h2><p>Tell us what you’re working on and what you want to achieve. We’ll start with a conversation.</p><div class="actions"><a class="btn btn-primary" href="https://wa.me/17585192707" target="_blank" rel="noopener">Message Grey Card Media ↗</a><a class="btn btn-outline" href="tel:+17585192707">Call 758-519-2707</a></div></div><div><strong>GREY CARD MEDIA</strong><p>Grande Riviere, Gros Islet<br>Saint Lucia</p><p style="font-size:12px">Media · Creative · Communications</p></div></div>
+    </section>
+  </main>
+  <footer class="wrap"><div class="foot-brand">GREY CARD MEDIA</div><div>© <span id="year">2026</span> Grey Card Media. All rights reserved.</div><div class="footer-links"><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
